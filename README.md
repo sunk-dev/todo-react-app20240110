@@ -1,35 +1,40 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# 리액트 프로젝트 시작하기
 
-In the project directory, you can run:
+1. nodejs 설치
+2. create-react-app 설치 (최초1번)
+```
+$ npm install -g create-react-app
+```
 
-### `npm start`
+3. react프로젝트 생성
+```
+$ npx create-react-app 프로젝트이름
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. react 프로젝트 실행
+```
+$ cd 프로젝트폴더
+$ npm start
+```
+- http://localhost:3000 에서 프론트엔드 서버 실행
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## git clone시 주의사항
+- `$ npm install` 명령을 터미널에서 실행하여 라이브러리 설치
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+5. 추가 라이브러리
+```
+$ npm install react-icons  // 아이콘
+$ npm install classnames   // 클래스 add/remove 편리한거
+$ npm install sass // scss 문법 사용
+$ npm install reactstrap bootstrap
+$ npm install @mui/material @emotion/react @emotion/styled
+$ npm install @mui/icons-material
+$ npm install react-router-dom
+```
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
