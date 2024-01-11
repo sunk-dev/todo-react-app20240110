@@ -3,23 +3,37 @@ import {MdAdd} from "react-icons/md";
 import './scss/TodoInput.scss';
 import cn from 'classnames';  //class add/remove 도와주는
 
-const TodoInput = () => {
+const TodoInput = ({onAdd}) => {
     //useState는 렌더링 상태를 관리하는 변수지정 리엑트 훅
     const [open,setOpen]=useState(false);
+    //할일 입력창 입력한 내을 저장할 변수
+    const [todoText,setTodoText]=useState('');
 
     //버튼 클릭 이벤트
     const onToggle=e=>{
         setOpen(!open);
 
     }
+    const todoChangeHandler=e=>{
+        console.log(e.target.value);
+        setTodoText(e.target.value);
+
+
+    }
+
+    const submitHandler=e=>
+        e.preventDefault();
+        onAdd(todoText);
+    }
 
     return (
         <>
             {open && (<div className='form-wrapper'>
-                <form className='insert-form'>
+                <form className='insert-form' onSubmit={submitHandler}>
                     <input
                         type='text'
                         placeholder='할 일을 입력 후, 엔터를 누르세요!'
+                        onChange={todoChangeHandler}
                     />
                 </form>
             </div>)}
