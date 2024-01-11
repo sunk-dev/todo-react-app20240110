@@ -24,6 +24,7 @@ const TodoInput = ({onAdd}) => {
     const submitHandler=e=>{
         e.preventDefault();
         onAdd(todoText);
+        setTodoText('');
     }
 
     return (

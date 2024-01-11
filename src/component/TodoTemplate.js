@@ -56,13 +56,23 @@ const TodoTemplate = () => {
          */
 
         setTodoList(prevState => [...prevState, newTodo]);
+
     };
+
+    //할일 삭제 처리함수
+    const removeTodo=id=>{
+        console.log('id',id);
+        const  index=id-1;
+        //id를 통해 객체를 탐색후 배열에서 제거
+        setTodoList(todoList.filter(todo=>todo.id!==id));
+
+    }
 
 
     return (
         <div className='TodoTemplate'>
             <TodoHeader />
-            <TodoMain todoList={todoList} />
+            <TodoMain todoList={todoList} onremove={removeTodo} />
             <TodoInput onAdd={addTodo} />
         </div>
     );
