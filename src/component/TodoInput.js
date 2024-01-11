@@ -21,7 +21,7 @@ const TodoInput = ({onAdd}) => {
 
     }
 
-    const submitHandler=e=>
+    const submitHandler=e=>{
         e.preventDefault();
         onAdd(todoText);
     }
@@ -34,6 +34,7 @@ const TodoInput = ({onAdd}) => {
                         type='text'
                         placeholder='할 일을 입력 후, 엔터를 누르세요!'
                         onChange={todoChangeHandler}
+                        value={todoText}
                     />
                 </form>
             </div>)}
