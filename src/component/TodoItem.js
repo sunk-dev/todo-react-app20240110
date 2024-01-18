@@ -9,7 +9,7 @@ const TodoItem = ({item,onRemove,onCheck}) => {
         onRemove(id);
     }
     const checkHandler=e=>{
-        onCheck(id);
+        onCheck(id,done);
         console.log('check!!');
     }
     return (
